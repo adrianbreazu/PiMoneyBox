@@ -12,7 +12,7 @@ def change(k):
 
 try:
     while True:
-        k = float(raw_input("enter angle: "))
+        k = float(input("enter angle: "))
         k = (1+(float(k)/180))/20
         change(k)
 
