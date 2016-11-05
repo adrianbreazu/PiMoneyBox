@@ -10,12 +10,14 @@ class Servo:
         pwm.start(1)
     
     def __update_angle__ (self, angle):
-        new_angle = float(angle) / 10.0 + 2.5
-        pwm.ChangeDutyCycle(new_angle)        
+        pwm.ChangeDutyCycle(angle)        
 
 
     def open(self):
-        __update_angle__(90)
+        # keep close
+        __update_angle__(2.5)
+        # open
+        __update_angle__(4)
         __close_gpio__()
 
 

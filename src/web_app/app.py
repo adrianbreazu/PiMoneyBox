@@ -1,5 +1,5 @@
 from flask import request, Flask, jsonify
-import servo as servo
+#import servo as servo
 
 SECURITY_ID = "bruno05"
 
@@ -16,8 +16,8 @@ def paid():
 
     content = request.json
 
-    servo = servo.Servo()
-    servo.open()
+    #servo = servo.Servo()
+    #servo.open()
     if content['security_id'] == SECURITY_ID : 
         return jsonify({'state':'open'}), 201
     else:
