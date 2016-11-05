@@ -17,8 +17,8 @@ def paid():
     content = request.json
 
     if content['security_id'] == SECURITY_ID : 
-        servo = servo.Servo()
-        servo.open()
+        serv = servo.Servo()
+        serv.open()
     
         return jsonify({'state':'open'}), 201        
     else:
