@@ -15,10 +15,10 @@ class Servo:
 
     def open(self):
         # keep close
-        __update_angle__(2.5)
+        self.__update_angle__(2.5)
         # open
-        __update_angle__(4)
-        __close_gpio__()
+        self.__update_angle__(4)
+        self.__close_gpio__()
 
 
     def __close_gpio__(self):
