@@ -6,8 +6,8 @@ class Servo:
     def __init__(self):
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(GPIO_PIN, GPIO.OUT)
-        pwm = GPIO.PWM(4, 100)
-        pwm.start(1)
+        self.pwm = GPIO.PWM(4, 50)
+        self.pwm.start(7.5)
     
     def __update_angle__ (self, angle):
         self.pwm.ChangeDutyCycle(angle)        

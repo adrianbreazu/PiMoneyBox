@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT)
-pwm = GPIO.PWM(4, 100)
+pwm = GPIO.PWM(4, 50)
 pwm.start(7.5)
 
 class Test:
