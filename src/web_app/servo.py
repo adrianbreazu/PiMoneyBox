@@ -10,7 +10,7 @@ class Servo:
         pwm.start(1)
     
     def __update_angle__ (self, angle):
-        pwm.ChangeDutyCycle(angle)        
+        self.pwm.ChangeDutyCycle(angle)        
 
 
     def open(self):
@@ -22,5 +22,5 @@ class Servo:
 
 
     def __close_gpio__(self):
-        pwm.stop()
+        self.pwm.stop()
         GPIO.cleanup()
